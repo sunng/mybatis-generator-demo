@@ -10,7 +10,8 @@
     <!--数据库驱动jar -->
     <classPathEntry location="/Users/abc/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar" />
 
-    <context id="mysql" defaultModelType="flat" targetRuntime="MyBatis3">
+    <!--如果你希望不生成和Example查询有关的内容, 使用MyBatis3Simple可以避免在后面的<table>中逐个进行配置-->
+    <context id="mysql" defaultModelType="flat" targetRuntime="MyBatis3Simple">
         <!--去除注释  -->
         <commentGenerator>
             <property name="suppressAllComments" value="true" />
